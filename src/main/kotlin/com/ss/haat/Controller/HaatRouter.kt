@@ -153,7 +153,7 @@ class HaatController(val userRepo:User_Repository, val animalRepo:Animal_Reposit
     {
         return if (token_varify(ter.name!!))
         {
-            if (type=="goru"||type=="sagol")
+            if (type=="goru"||type=="sagol"||type=="mohish")
             {
                 animalRepo.getAnimalType(type)
             }
@@ -413,7 +413,7 @@ class HaatController(val userRepo:User_Repository, val animalRepo:Animal_Reposit
                     usr.order_state_two +=1
                     userRepo.save(usr)
 
-                    val client = TwilioRestClient.Builder("ACfd948489f07ab6bad2d75f709d63d26f", "7ab9dc96f0834507007f1e39821b1673").build()
+                    val client = TwilioRestClient.Builder("ACfd948489f07ab6bad2d75f709d63d26f", "f2f08222942422a47178c16e9fae7c21").build()
 
                     val message = MessageCreator(
                             PhoneNumber("+88"+ter.name),
